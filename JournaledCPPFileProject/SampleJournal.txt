@@ -1,0 +1,15 @@
+#include <iostream>
+#include "..\AutomationBinding\AutomationAPI_Session.h"
+#include "..\AutomationBinding\AutomationAPI_Part.h"
+
+int main()
+{
+    std::cout << "Hello World!\n";
+    AutomationAPI::Session* mySession = AutomationAPI::Session::GetSession();
+AutomationAPI::Part * Part1 = mySession->MakePart("F:\UC\Spring\SA\Some.part");
+Part1->MakeWidgetFeature();
+Part1->Save();
+AutomationAPI::Part * Part2 = mySession->OpenPart("F:\UC\Spring\SA\git\SoftwareArchitectureCLassApplication-main_Assignment\SampleVersionUp.prt");
+Part2->Save();
+
+}
